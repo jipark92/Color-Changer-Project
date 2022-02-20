@@ -1,8 +1,8 @@
-const btns = document.querySelector('button');
+const btns = document.querySelector('.color-btn');
 const background = document.querySelector('.container');
 const textColor = document.querySelector('.text-color');
 
-const colors = ['red', 'blue', 'green', 'pink'];
+const colors = ['red', 'blue', 'green', 'pink', 'bisque'];
 
 btns.addEventListener('click', ()=>{
     let randomNumber = randomNumberGen();
@@ -21,3 +21,24 @@ function randomNumberGen() {
     return Math.floor(Math.random() * colors.length);
 }
 
+
+
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+
+const hexBtn = document.querySelector('.hex-btn');
+
+
+hexBtn.addEventListener('click', ()=>{
+    let hexColor = "#";
+
+    for (let i = 0; i < 6;i++){
+        hexColor += hex[randomHexGen()];
+    } // this add 6 random numbers from hex array
+
+    background.style.backgroundColor = hexColor; //null for now
+    textColor.textContent = hexColor;
+});
+
+function randomHexGen() {
+    return Math.floor(Math.random() * hex.length);
+};
