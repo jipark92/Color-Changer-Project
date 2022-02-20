@@ -2,7 +2,7 @@ const btns = document.querySelector('.color-btn');
 const background = document.querySelector('.container');
 const textColor = document.querySelector('.text-color');
 
-const colors = ['red', 'blue', 'green', 'pink', 'bisque'];
+const colors = ['red', 'blue', 'green', 'pink', 'bisque', 'black', 'white'];
 
 btns.addEventListener('click', ()=>{
     let randomNumber = randomNumberGen();
