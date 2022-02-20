@@ -42,3 +42,10 @@ hexBtn.addEventListener('click', ()=>{
 function randomHexGen() {
     return Math.floor(Math.random() * hex.length);
 };
+
+const resetBtn = document.querySelector('.reset-btn');
+
+resetBtn.addEventListener('click', ()=>{
+    background.style.backgroundColor = 'bisque';
+    textColor.textContent = 'Bisque';
+})
