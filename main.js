@@ -10,7 +10,7 @@ btns.addEventListener('click', ()=>{
     console.log(randomNumber);
 
     background.style.backgroundColor = colors[randomNumber];
-    textColor.textContent = colors[randomNumber];
+    textColor.textContent = colors[randomNumber].toUpperCase();
 });
 
 
